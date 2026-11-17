@@ -12,4 +12,6 @@ COPY app/app.py .
 
 EXPOSE 8000
 
+USER 10001:10001
+
 CMD ["python", "app.py"]
