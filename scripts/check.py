@@ -91,5 +91,5 @@ try:
 
 except (Exception, KeyboardInterrupt) as e:
     raise SystemExit(f"Ошибка на этапе {stage_count}. {stage}:\n{e}")
-finally:
+finally: # аналог trap
     subprocess.run(["docker", "compose", "-p", _proj, "down", "-v", "--rmi", "local"], cwd=_root, capture_output=True)
