@@ -1,3 +1,18 @@
-## Шаблон для третьего ДЗ по ИПР
+# ДЗ 3
 
-Условие дз доступно по [ссылке](https://github.com/Nikfilk2030/missing_semester_hse_cs/blob/main/2026/amcs/year_1/hw_3/README.md)
+Упаковка в docker приложения `app/`
+
+## Запуск
+
+```sh
+cp .env.example .env
+docker compose up -d --build
+docker compose down
+```
+
+## Настройки для docker compose
+
+| Переменная | Значение по умолчанию | За что отвечает |
+| --- | --- | --- |
+| `APP_PORT` | `8080` | локальный порт сервиса |
+| `GREETING` | `Hello, Docker!` | приветствие, которое возвращает сервис |
